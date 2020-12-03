@@ -14,5 +14,14 @@ Notes:
 - You can return the answer in any order.
 """
 def two_sum(nums, target):
-    # Your code here
+    for i in range(len(nums)):
+        for j in range(len(nums)):
+            if i == j:
+                continue
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    
+    return [-1, -1]
 
+print(two_sum(nums = [2,5,9,13], target = 7))
+print(two_sum(nums = [4,3,5], target = 8))
